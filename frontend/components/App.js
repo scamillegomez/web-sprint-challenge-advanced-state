@@ -12,7 +12,7 @@ import Form from './Form'
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-import reducer from '../state/reducer'
+import {reducer} from '../state/reducer'
 
 // REDUX STORE
 let store
@@ -22,7 +22,8 @@ export const resetStore = () => {
 }
 resetStore()
 
-export default function App() {
+const App = (props) => {
+ 
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -42,3 +43,7 @@ export default function App() {
     </Provider>
   )
 }
+
+
+
+export default App;
